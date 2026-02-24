@@ -43,14 +43,6 @@
 
 ---
 
-## 🖥️ Screenshots
-
-> *(Add your screenshots here)*
-```
-Admin Dashboard    →  /screenshots/admin-dashboard.png
-Employee Dashboard →  /screenshots/employee-dashboard.png
-```
-
 ---
 
 ## 📁 Folder Structure
