@@ -4,6 +4,8 @@ import AdminDashboard from './Dashboard/AdminDashboard'
 import EmployeeDashboard from './Dashboard/EmployeeDashboard'
 import { admin, employees, setlocalstorage } from './Utilis/LocalStorage'
 import { AuthContext } from './AuthContext/AuthProvider'
+import { BrowserRouter,Route, Routes , Link , Navigate } from 'react-router-dom'
+
 const App = () => {
   const [user, setuser] = useState('')
   const [loggedInUserData, setloggedInUserData] = useState('')
@@ -39,9 +41,16 @@ const App = () => {
   console.log(loggedInUserData)
   return (
     <div>
-      {!user ? <Login handleLogin1={handleLogin1} /> : ' '}
-      {user == 'admin' && <AdminDashboard Data={loggedInUserData} />}
-      {user == 'employee' && <EmployeeDashboard Data = {loggedInUserData}/>}
+             {/* {!user ? <Login handleLogin1={handleLogin1} /> : ' '}
+               {user == 'employee' && <EmployeeDashboard Data={loggedInUserData}/>}
+              {user == 'admin' && <AdminDashboard Data ={loggedInUserData}/>}   */}
+              <BrowserRouter>
+              <Routes>
+                <Route path="/login" element={!user ? <Login handleLogin1={handleLogin1}/> : <Navigate to={user == "admin" ? "/admin" :'/employee'}/>}/>
+                <Route path="/admin" element={user=="admin" ? <AdminDashboard Data={loggedInUserData}/> : <Navigate to="/login"/>}/>
+                <Route path="/employee" element={user=="employee"?<EmployeeDashboard Data={loggedInUserData}/>:<Navigate to="/login"/>}/>
+              </Routes>
+              </BrowserRouter>    
     </div>
   )
 }

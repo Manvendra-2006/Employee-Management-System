@@ -8,16 +8,17 @@ const AcceptTask = ({ data }) => {
     <div style={cardStyle("#007bff")}>
 
       <div style={headerStyle}>
-        <button style={buttonStyle("#007bff")}>{data.taskCategory}</button>
+        <button style={buttonStyle("#007bff")}>{data.category}</button>
         <div>
-          <div>Assign: {data.taskAssignDate}</div>
-          <div>Deadline: {data.taskDeadline}</div>
+          <div>Assign: {data.date}</div>
+          
         </div>
       </div>
 
       <div>
         <h3>{data.taskTitle}</h3>
-        <p>{data.taskDescription}</p>
+        <p>{data.description
+}</p>
       </div>
 
       <div style={{ display: "flex", justifyContent: "space-between" }}>

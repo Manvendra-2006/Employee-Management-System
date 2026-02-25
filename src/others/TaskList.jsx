@@ -8,16 +8,16 @@ const TaskList = ({data}) => {
 return (
     <div style={{display:"flex",gap:"1rem",overflowX:"auto",marginTop:"4rem"}}>
         {data.tasks.map((item)=>{            
-                if(item.active){
+                if(item.taskStatus?.active){
                     return <AcceptTask data={item}/>
                 }
-                if(item.failed){
+                if(item.taskStatus?.failedTask){
                     return <FailedTask data={item}/>
                 }
-                if(item.completed){
+                if(item.taskStatus?.completedTask){
                     return <Completed data={item}/>
                 }
-                if(item.newTask){
+                if(item.taskStatus?.newTask){
                     return <NewTask data={item}/>
                 }
                 

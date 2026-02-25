@@ -8,16 +8,17 @@ const Completed = ({ data }) => {
     <div style={cardStyle("green")}>
 
       <div style={headerStyle}>
-        <button style={buttonStyle("green")}>{data.taskCategory}</button>
+        <button style={buttonStyle("green")}>{data.category}</button>
         <div>
-          <div>Assign: {data.taskAssignDate}</div>
-          <div>Deadline: {data.taskDeadline}</div>
+          <div>Assign: {data.date}</div>
+       
         </div>
       </div>
 
       <div>
         <h3>{data.taskTitle}</h3>
-        <p>{data.taskDescription}</p>
+        <p>{data.description
+}</p>
       </div>
 
       <button style={buttonStyle("#444")}>Edit</button>
