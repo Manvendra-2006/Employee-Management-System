@@ -62,10 +62,10 @@ const AllTask = () => {
                                 }
                             >
                                 <td style={tdStyle}>{item.name}</td>
-                                <td style={tdStyle}>{item.taskStats.accepted}</td>
-                                <td style={tdStyle}>{item.taskStats.completed}</td>
-                                <td style={tdStyle}>{item.taskStats.new}</td>
-                                <td style={tdStyle}>{item.taskStats.failed}</td>
+                                <td style={tdStyle}>{item.taskCount.accepted}</td>
+                                <td style={tdStyle}>{item.taskCount.completed}</td>
+                                <td style={tdStyle}>{item.taskCount.newTask}</td>
+                                <td style={tdStyle}>{item.taskCount.failed}</td>
                             </tr>
                         ))}
                     </tbody>

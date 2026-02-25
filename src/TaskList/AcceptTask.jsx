@@ -8,16 +8,17 @@ const AcceptTask = ({ data }) => {
     <div style={cardStyle("#007bff")}>
 
       <div style={headerStyle}>
-        <button style={buttonStyle("#007bff")}>{data.category}</button>
+        <button style={buttonStyle("#007bff")}>{data.
+taskCategory}</button>
         <div>
-          <div>Assign: {data.date}</div>
-          
+          <div>Assign: {data.taskAssignDate}</div>
+           <div>Deadline :  {data.taskDeadline}</div>
         </div>
       </div>
 
       <div>
         <h3>{data.taskTitle}</h3>
-        <p>{data.description
+        <p>{data.taskDescription
 }</p>
       </div>
 

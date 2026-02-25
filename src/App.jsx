@@ -46,6 +46,7 @@ const App = () => {
               {user == 'admin' && <AdminDashboard Data ={loggedInUserData}/>}   */}
               <BrowserRouter>
               <Routes>
+                <Route path='/' element={<Navigate to="/login"/>}/>
                 <Route path="/login" element={!user ? <Login handleLogin1={handleLogin1}/> : <Navigate to={user == "admin" ? "/admin" :'/employee'}/>}/>
                 <Route path="/admin" element={user=="admin" ? <AdminDashboard Data={loggedInUserData}/> : <Navigate to="/login"/>}/>
                 <Route path="/employee" element={user=="employee"?<EmployeeDashboard Data={loggedInUserData}/>:<Navigate to="/login"/>}/>

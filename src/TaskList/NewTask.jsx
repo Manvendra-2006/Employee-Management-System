@@ -8,15 +8,17 @@ const NewTask = ({ data }) => {
     <div style={cardStyle("orange")}>
 
       <div style={headerStyle}>
-        <button style={buttonStyle("orange")}>{data.category}</button>
+        <button style={buttonStyle("orange")}>{data.taskCategory}</button>
         <div>
-          <div>Assign: {data.date}</div>
+         <div>Assign: {data.taskAssignDate}</div>
+           <div>Deadline :  {data.taskDeadline}</div>
         </div>
       </div>
 
       <div>
         <h3>{data.taskTitle}</h3>
-        <p>{data.description}</p>
+  <p>{data.taskDescription
+}</p>
       </div>
 
       <button style={buttonStyle("#007bff")}>Accept Task</button>
